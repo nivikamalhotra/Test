@@ -24,71 +24,15 @@
     "vhost": "/"
   },
   "database": {
-    "account": {
+    "account":{
       "host": "localhost",
-      "port": 3301,
-      "name": "lyc_account",
-      "user": "lmcmasterqa",
-      "password": "GVOIOd8FDOrT05JzTVyr",
+      "port": 3306,
+      "name": "user_server",
+      "user": "root",
+      "password": "root",
       "log_sql_query": 1,
-      "debug": false
-    },
-    "career": {
-      "host": "localhost",
-      "port": 3301,
-      "name": "lyc_career",
-      "user": "lmcmasterqa",
-      "password": "GVOIOd8FDOrT05JzTVyr",
-      "log_sql_query": 1,
-      "debug": false
+      "debug": true
     }
-  },
-  "S3": {
-    "ACCESS_KEY": "AKIA3S4AX4QAXWRYCC7N",
-    "SECRET_KEY": "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",
-    "STATIC_BUCKET": "lyc-staticcontenet",
-    "STATIC_BUCKET_URL": "https://lyc-staticcontenet.s3.ap-south-1.amazonaws.com/",
-    "USER_PROFILE_PATH": "cgc/profile/",
-    "TEMPLATE_FILE_PATH": "entity/template/UserImportTemplate.xlsx",
-    "TEMPLATE_FOLDER_PATH": "entity/template/",
-    "DOSSIER_FOLDER_PATH": "dossier/",
-    "ENTITY_FOLDER_PATH": "/entity/media"
-  },
-  "SES": {
-    "ACCESS_KEY": "AKIA3S4AX4QA6L4A62PX",
-    "SECRET_KEY": "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",
-    "FROM_EMAIL": "lyctech@veative.com"
-  },
-  "SNS": {
-    "ACCESS_KEY": "AKIA3S4AX4QAQFVN4NHM",
-    "SECRET_KEY": "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"
-  },
-  "COGNITO": {
-    "ACCESS_KEY": "AKIA3S4AX4QA4N4BT3ID",
-    "SECRET_KEY": "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",
-    "USER_POOL_ID": "ap-south-1_yoxJSeBvp",
-    "APP_CLIENT_ID": "26k673746mg2birpma4opmjvho"
-  },
-  "DYNAMO_DB": {
-    "ACCESS_KEY": "AKIA3S4AX4QAZCQNST2I",
-    "SECRET_KEY": "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",
-    "TABLE_PRIFIX": "DEV_"
-  },
-  "EKYC": {
-    "SUREPASS_TOKEN": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzMzU0NTYwNiwianRpIjoiYjRkMTE3YjUtMDI0MS00NzM4LWE1NWEtOGU0NjdiNGNiZjNhIiwidHlwZSI6ImFjY2VzcyIsImlkZW50aXR5IjoiZGV2LnZlYXRpdmVAYWFkaGFhcmFwaS5pbyIsIm5iZiI6MTYzMzU0NTYwNiwiZXhwIjoxOTQ4OTA1NjA2LCJ1c2VyX2NsYWltcyI6eyJzY29wZXMiOlsicmVhZCJdfX0.J9AAbGXYSxD9zadfB-FV1CCbS5Z64DJmw5PYgt3Svn4",
-    "SUREPASS_URL": "https://kyc-api.surepass.io"
-  },
-  "API_ENDPOINT": {
-    "SUBSCRIPTION": "https://qainapi.launchmycareer.com/subscription",
-    "LEARNING_HUB": "https://qainapi.launchmycareer.com/learninghub",
-    "LIVE_COUNSELLING": "https://qainapi.launchmycareer.com/counselling",
-    "ADMIN": "https://admin-qain.launchmycareer.com"
-  },
-  "AWS": {
-    "REGION": "ap-south-1"
-  },
-  "ENTITY": {
-    "ID": "92b91faa-2c7e-434c-b6db-cd13e351bc33"
   },
   "scheduler": {
     "url": "",

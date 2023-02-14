@@ -14,8 +14,8 @@ import momentTz from 'moment-timezone';
  */
 import { config } from './config';
 
-import { DB_CONN } from './db/dbConnection';
-import { AC_MODELS, CR_MODELS } from './db/models';
+import { DB_CONN } from "./db/dbConnections";
+import { AC_MODELS } from "./db/models";
 
 /**
  * importing Server
@@ -52,11 +52,13 @@ global.Promise = <any>promise;
 // })();
 //await connectToCareerDb();
 //await addCareerDBModels();
-Promise.all([connectToAccountDb(), addAccountDBModels(), connectToCareerDb(), addCareerDBModels()]).then(() => {
-  Server.init();
-}).catch(error => {
-  console.log(`error in starting Server: ${error}`);
-});
+Promise.all([connectToAccountDb(), addAccountDBModels()])
+  .then(() => {
+    Server.init();
+  })
+  .catch((error) => {
+    console.log(`error in starting Server: ${error}`);
+  });
 
 async function connectToAccountDb() {
   try {
@@ -70,24 +72,6 @@ async function addAccountDBModels() {
   try {
     for (let Model of Object.values(AC_MODELS)) {
       DB_CONN.AC[Model.name] = Model;
-    }
-  } catch (error: any) {
-    throw new Error(`Error connecting to DataBase Model: ${error}`);
-  }
-}
-
-async function connectToCareerDb() {
-  try {
-    await DB_CONN.CR.authenticate();
-  } catch (error: any) {
-    throw new Error(`Error connecting to DataBase: ${error}`);
-  }
-}
-
-async function addCareerDBModels() {
-  try {
-    for (let Model of Object.values(CR_MODELS)) {
-      DB_CONN.CR[Model.name] = Model;
     }
   } catch (error: any) {
     throw new Error(`Error connecting to DataBase Model: ${error}`);
