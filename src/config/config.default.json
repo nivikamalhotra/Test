@@ -34,6 +34,15 @@
       "debug": true
     }
   },
+  "COGNITO": {
+    "ACCESS_KEY": "AKIA3S4AX4QA4N4BT3ID",
+    "SECRET_KEY": "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",
+    "USER_POOL_ID": "ap-south-1_3zDVQYUAQ",
+    "APP_CLIENT_ID": "63j7lnnmfdcumsjbalg7dg9k5g"
+  },
+  "AWS": {
+    "REGION": "ap-south-1"
+  },
   "scheduler": {
     "url": "",
     "accessToken": "changeme"

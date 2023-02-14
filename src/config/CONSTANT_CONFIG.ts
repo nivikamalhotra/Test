@@ -22,6 +22,15 @@ const accountDbDebug: boolean = config.nConfig.get("database:account:debug");
 const accountLogSqlQuery: boolean = config.nConfig.get(
   "database:account:log_sql_query"
 );
+const AWS_REGION: string = config.nConfig.get("AWS:REGION");
+
+const COGNITO_ACCESS_KEY: string = config.nConfig.get("COGNITO:ACCESS_KEY");
+const COGNITO_SECRET_KEY: string = config.nConfig.get("COGNITO:SECRET_KEY");
+const COGNITO_USER_POOL_ID: string = config.nConfig.get("COGNITO:USER_POOL_ID");
+const COGNITO_APP_CLIENT_ID: string = config.nConfig.get(
+  "COGNITO:APP_CLIENT_ID"
+);
+
 
 export const CONSTANT_CONFIG = {
   SERVER: {
@@ -49,9 +58,18 @@ export const CONSTANT_CONFIG = {
       LOG: accountLogSqlQuery,
     },
   },
+  COGNITO: {
+    ACCESS_KEY: COGNITO_ACCESS_KEY,
+    SECRET_KEY: COGNITO_SECRET_KEY,
+    USER_POOL_ID: COGNITO_USER_POOL_ID,
+    APP_CLIENT_ID: COGNITO_APP_CLIENT_ID,
+  },
   PATHS: {
     ASSETS: assetsDirectory,
     CONTENT: contentDirectory,
     UPLOADS: uploadsDirectory,
+  },
+  AWS: {
+    REGION: AWS_REGION,
   },
 };
